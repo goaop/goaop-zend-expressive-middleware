@@ -3,8 +3,8 @@
 namespace Reinfi\GoAop\ExpressiveMiddleware\Middleware;
 
 use Go\Core\AspectContainer;
-use Interop\Http\Server\MiddlewareInterface;
-use Interop\Http\Server\RequestHandlerInterface;
+use Interop\Http\ServerMiddleware\DelegateInterface;
+use Interop\Http\ServerMiddleware\MiddlewareInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -45,23 +45,20 @@ class AspectMiddleware implements MiddlewareInterface
     }
 
     /**
-     * Process an incoming server request and return a response, optionally delegating
-     * response creation to a handler.
-     *
      * @param ServerRequestInterface $request
-     * @param RequestHandlerInterface $handler
+     * @param DelegateInterface      $delegate
      *
      * @return ResponseInterface
      */
     public function process(
         ServerRequestInterface $request,
-        RequestHandlerInterface $handler
+        DelegateInterface $delegate
     ) {
         foreach ($this->aspects as $aspectName) {
             $aspect = $this->container->get($aspectName);
             $this->aspectContainer->registerAspect($aspect);
         }
 
-        return $handler->handle($request);
+        return $delegate->process($request);
     }
 }
