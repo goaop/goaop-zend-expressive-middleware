@@ -34,7 +34,7 @@
   },
   "require-dev": {
     "symfony/console": "^3.3",
-    "phpunit/phpunit": "^6.4",
+    "phpunit/phpunit": "^5.7",
     "zendframework/zend-expressive": "^2.0",
     "zendframework/zend-config-aggregator": "^1.0"
   }
