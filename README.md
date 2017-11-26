@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/reinfi/goaop-zend-expressive-middleware.svg?branch=master)](https://travis-ci.org/reinfi/goaop-zend-expressive-middleware)
+
 GoAop Expressive Middleware
 ===========================
 
