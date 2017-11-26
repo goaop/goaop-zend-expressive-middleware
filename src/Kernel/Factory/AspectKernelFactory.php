@@ -1,6 +1,6 @@
 <?php
 
-namespace Reinfi\GoAop\ExpressiveMiddleware\Factory;
+namespace Reinfi\GoAop\ExpressiveMiddleware\Kernel\Factory;
 
 use Go\Core\AspectKernel;
 use Reinfi\GoAop\ExpressiveMiddleware\Kernel\ExpressiveAspectKernel;
@@ -8,7 +8,7 @@ use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 /**
- * @package Reinfi\GoAop\ExpressiveMiddleware\Factory
+ * @package Reinfi\GoAop\ExpressiveMiddleware\Kernel\Factory
  */
 class AspectKernelFactory implements FactoryInterface
 {

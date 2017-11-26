@@ -10,7 +10,7 @@ use Go\Core\AspectContainer;
 use Go\Core\AspectKernel;
 use Go\Core\GoAspectContainer;
 use Reinfi\GoAop\ExpressiveMiddleware\Factory\AspectContainerFactory;
-use Reinfi\GoAop\ExpressiveMiddleware\Factory\AspectKernelFactory;
+use Reinfi\GoAop\ExpressiveMiddleware\Kernel\Factory\AspectKernelFactory;
 use Reinfi\GoAop\ExpressiveMiddleware\Middleware\AspectMiddleware;
 use Reinfi\GoAop\ExpressiveMiddleware\Middleware\Factory\AspectMiddlewareFactory;
 
