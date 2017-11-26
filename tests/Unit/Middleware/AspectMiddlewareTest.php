@@ -3,7 +3,7 @@
 namespace Reinfi\GoAop\ExpressiveMiddleware\Tests\Unit\Middleware;
 
 use Go\Core\AspectContainer;
-use Interop\Http\Server\RequestHandlerInterface;
+use Interop\Http\ServerMiddleware\DelegateInterface;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -44,11 +44,11 @@ class AspectMiddlewareTest extends TestCase
         );
 
         $request = $this->prophesize(ServerRequestInterface::class);
-        $handler = $this->prophesize(RequestHandlerInterface::class);
+        $delegate = $this->prophesize(DelegateInterface::class);
 
         $middleware->process(
             $request->reveal(),
-            $handler->reveal()
+            $delegate->reveal()
         );
     }
 }

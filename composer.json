@@ -1,0 +1,41 @@
+{
+  "name": "reinfi/goaop-zend-expressive-middleware",
+  "type": "library",
+  "description": "An Zend Expressive middleware for loading goaop aspects.",
+  "keywords": [
+    "zend",
+    "expressive",
+    "middleware",
+    "goaop"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Reinfi"
+    }
+  ],
+  "require": {
+    "goaop/framework": "^2.1",
+    "zendframework/zend-servicemanager": "^3.0",
+    "http-interop/http-middleware": "^0.4.0"
+  },
+  "bin": [
+    "bin/goaop-expressive-warmup"
+  ],
+  "autoload": {
+    "psr-4": {
+      "Reinfi\\GoAop\\ExpressiveMiddleware\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Reinfi\\GoAop\\ExpressiveMiddleware\\Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "symfony/console": "^3.3",
+    "phpunit/phpunit": "^6.4",
+    "zendframework/zend-expressive": "^2.0",
+    "zendframework/zend-config-aggregator": "^1.0"
+  }
+}
