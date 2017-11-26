@@ -16,6 +16,7 @@ AOP defines new instruments for developers, they are:
  * Aspect is a special class that combines pointcuts and advices together, each pointcut is defined as an annotation and each advice is a method inside this aspect.
  
  You can read more about AOP in different sources, there are good articles for Java language and they can be applied for PHP too, because it's general paradigm. 
+
 Installation
 ------------
 
@@ -27,7 +28,7 @@ $ composer require reinfi/goaop-zend-expressive-middleware
 
 Add the `\Reinfi\GoAop\ExpressiveMiddleware\Middleware\AspectMiddleware` to your list of middleswares in the config/pipeline.php:
 ```php
-$app->pipe(ErrorHandler::class);
+$app->pipe(AspectMiddleware::class);
 ```
 It is the best to add the middleware as early as possible, so that the AOP engine can take actions before any other middleware is applied.
 
