@@ -161,7 +161,7 @@ class LoggingAspect implements Aspect
 To register this application aspect in the container, create an appropriate definition for this service in the `module.config.php` file:
 
 ```
-    'service_manager' => array(
+    'dependencies' => array(
         'invokables' => array(
             LoggingAspect::class => LoggingAspect::class,
         )
