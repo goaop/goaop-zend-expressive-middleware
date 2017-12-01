@@ -1,12 +1,12 @@
 <?php
 
-namespace Reinfi\GoAop\ExpressiveMiddleware\Tests\Integration\Middleware;
+namespace Go\Zend\Expressive\Tests\Integration\Middleware;
 
 use Go\Core\AspectContainer;
 use PHPUnit\Framework\TestCase;
-use Reinfi\GoAop\ExpressiveMiddleware\ConfigProvider;
-use Reinfi\GoAop\ExpressiveMiddleware\Middleware\AspectMiddleware;
-use Reinfi\GoAop\ExpressiveMiddleware\Tests\Aspect\TestAspect;
+use Go\Zend\Expressive\ConfigProvider;
+use Go\Zend\Expressive\Middleware\AspectMiddleware;
+use Go\Zend\Expressive\Tests\Aspect\TestAspect;
 use Zend\ConfigAggregator\ArrayProvider;
 use Zend\ConfigAggregator\ConfigAggregator;
 use Zend\Diactoros\Response\EmitterInterface;
@@ -19,7 +19,7 @@ use Zend\ServiceManager\Factory\InvokableFactory;
 use Zend\ServiceManager\ServiceManager;
 
 /**
- * @package Reinfi\GoAop\ExpressiveMiddleware\Tests\Integration\Middleware
+ * @package Go\Zend\Expressive\Tests\Integration\Middleware
  */
 class AspectMiddlewareTest extends TestCase
 {

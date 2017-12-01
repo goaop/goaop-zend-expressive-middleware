@@ -1,12 +1,12 @@
 <?php
 
-namespace Reinfi\GoAop\ExpressiveMiddleware\Tests\Unit;
+namespace Go\Zend\Expressive\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
-use Reinfi\GoAop\ExpressiveMiddleware\ConfigProvider;
+use Go\Zend\Expressive\ConfigProvider;
 
 /**
- * @package Reinfi\GoAop\ExpressiveMiddleware\Tests\Unit
+ * @package Go\Zend\Expressive\Tests\Unit
  */
 class ConfigProviderTest extends TestCase
 {

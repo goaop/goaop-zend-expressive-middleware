@@ -1,13 +1,13 @@
 <?php
 
-namespace Reinfi\GoAop\ExpressiveMiddleware\Middleware\Factory;
+namespace Go\Zend\Expressive\Middleware\Factory;
 
 use Go\Core\AspectContainer;
-use Reinfi\GoAop\ExpressiveMiddleware\Middleware\AspectMiddleware;
+use Go\Zend\Expressive\Middleware\AspectMiddleware;
 use Psr\Container\ContainerInterface;
 
 /**
- * @package Reinfi\GoAop\ExpressiveMiddleware\Middleware\Factory
+ * @package Go\Zend\Expressive\Middleware\Factory
  */
 class AspectMiddlewareFactory
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Reinfi\GoAop\ExpressiveMiddleware\Tests\Aspect;
+namespace Go\Zend\Expressive\Tests\Aspect;
 
 use Go\Aop\Aspect;
 
 /**
- * @package Reinfi\GoAop\ExpressiveMiddleware\Tests\Aspect
+ * @package Go\Zend\Expressive\Tests\Aspect
  */
 class TestAspect implements Aspect
 {

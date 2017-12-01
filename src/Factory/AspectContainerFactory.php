@@ -1,6 +1,6 @@
 <?php
 
-namespace Reinfi\GoAop\ExpressiveMiddleware\Factory;
+namespace Go\Zend\Expressive\Factory;
 
 use Go\Core\AspectContainer;
 use Go\Core\AspectKernel;
@@ -8,7 +8,7 @@ use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 /**
- * @package Reinfi\GoAop\ExpressiveMiddleware\Factory
+ * @package Go\Zend\Expressive\Factory
  */
 class AspectContainerFactory implements FactoryInterface
 {

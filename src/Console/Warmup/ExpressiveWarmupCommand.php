@@ -1,6 +1,6 @@
 <?php
 
-namespace Reinfi\GoAop\ExpressiveMiddleware\Console\Warmup;
+namespace Go\Zend\Expressive\Console\Warmup;
 
 use Go\Core\AspectContainer;
 use Go\Core\AspectKernel;
@@ -17,7 +17,7 @@ use Zend\ServiceManager\ServiceManager;
 /**
  * @codeCoverageIgnored
  *
- * @package Reinfi\GoAop\ExpressiveMiddleware\Console\Warmup
+ * @package Go\Zend\Expressive\Console\Warmup
  */
 class ExpressiveWarmupCommand extends Command
 {

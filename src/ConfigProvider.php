@@ -1,9 +1,9 @@
 <?php
 
-namespace Reinfi\GoAop\ExpressiveMiddleware;
+namespace Go\Zend\Expressive;
 
 /**
- * @package Reinfi\GoAop\ExpressiveMiddleware
+ * @package Go\Zend\Expressive
  */
 class ConfigProvider
 {

@@ -1,15 +1,15 @@
 <?php
 
-namespace Reinfi\GoAop\ExpressiveMiddleware\Tests\Unit\Middleware\Factory;
+namespace Go\Zend\Expressive\Tests\Unit\Middleware\Factory;
 
 use Go\Core\AspectContainer;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
-use Reinfi\GoAop\ExpressiveMiddleware\Middleware\AspectMiddleware;
-use Reinfi\GoAop\ExpressiveMiddleware\Middleware\Factory\AspectMiddlewareFactory;
+use Go\Zend\Expressive\Middleware\AspectMiddleware;
+use Go\Zend\Expressive\Middleware\Factory\AspectMiddlewareFactory;
 
 /**
- * @package Reinfi\GoAop\ExpressiveMiddleware\Tests\Unit\Middleware\Factory
+ * @package Go\Zend\Expressive\Tests\Unit\Middleware\Factory
  */
 class AspectMiddlewareFactoryTest extends TestCase
 {

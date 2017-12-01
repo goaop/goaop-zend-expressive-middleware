@@ -24,12 +24,12 @@
   ],
   "autoload": {
     "psr-4": {
-      "Reinfi\\GoAop\\ExpressiveMiddleware\\": "src/"
+      "Go\\Zend\\Expressive\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Reinfi\\GoAop\\ExpressiveMiddleware\\Tests\\": "tests/"
+      "Go\\Zend\\Expressive\\Tests\\": "tests/"
     }
   },
   "require-dev": {
@@ -37,5 +37,11 @@
     "phpunit/phpunit": "^5.7",
     "zendframework/zend-expressive": "^2.0",
     "zendframework/zend-config-aggregator": "^1.0"
+  },
+  "extra": {
+    "zf": {
+      "component": "Go\\Zend\\Expressive",
+      "config-provider": "Go\\Zend\\Expressive\\ConfigProvider"
+    }
   }
 }
