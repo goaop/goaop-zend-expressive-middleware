@@ -1,14 +1,14 @@
 <?php
 
-namespace Reinfi\GoAop\ExpressiveMiddleware\Tests\Unit\Kernel\Factory;
+namespace Go\Zend\Expressive\Tests\Unit\Kernel\Factory;
 
 use Go\Core\AspectKernel;
 use Interop\Container\ContainerInterface;
-use Reinfi\GoAop\ExpressiveMiddleware\Kernel\Factory\AspectKernelFactory;
+use Go\Zend\Expressive\Kernel\Factory\AspectKernelFactory;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @package Reinfi\GoAop\ExpressiveMiddleware\Tests\Unit\Kernel\Factory
+ * @package Go\Zend\Expressive\Tests\Unit\Kernel\Factory
  */
 class AspectKernelFactoryTest extends TestCase
 {

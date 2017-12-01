@@ -1,12 +1,12 @@
 <?php
 
-namespace Reinfi\GoAop\ExpressiveMiddleware\Kernel;
+namespace Go\Zend\Expressive\Kernel;
 
 use Go\Core\AspectContainer;
 use Go\Core\AspectKernel;
 
 /**
- * @package Reinfi\GoAop\ExpressiveMiddleware\Kernel
+ * @package Go\Zend\Expressive\Kernel
  */
 class ExpressiveAspectKernel extends AspectKernel
 {

@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/reinfi/goaop-zend-expressive-middleware.svg?branch=master)](https://travis-ci.org/reinfi/goaop-zend-expressive-middleware)
+[![Build Status](https://travis-ci.org/goaop/goaop-zend-expressive-middleware.svg?branch=master)](https://travis-ci.org/reinfi/goaop-zend-expressive-middleware)
 
 GoAop Expressive Middleware
 ===========================
@@ -25,10 +25,10 @@ Installation
 GoAopModule can be easily installed with composer. Just ask a composer to download the bundle with dependencies by running the command:
 
 ```bash
-$ composer require reinfi/goaop-zend-expressive-middleware
+$ composer require goaop/goaop-zend-expressive-middleware
 ```
 
-Add the `\Reinfi\GoAop\ExpressiveMiddleware\Middleware\AspectMiddleware` to your list of middleswares in the config/pipeline.php:
+Add the `\Go\Zend\Expressive\Middleware\AspectMiddleware` to your list of middleswares in the config/pipeline.php:
 ```php
 $app->pipe(AspectMiddleware::class);
 ```

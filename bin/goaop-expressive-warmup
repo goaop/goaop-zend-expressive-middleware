@@ -2,7 +2,7 @@
 <?php
 
 use Go\Core\AspectKernel;
-use Reinfi\GoAop\ExpressiveMiddleware\Console\Warmup\ExpressiveWarmupCommand;
+use Go\Zend\Expressive\Console\Warmup\ExpressiveWarmupCommand;
 use Symfony\Component\Console\Application;
 
 

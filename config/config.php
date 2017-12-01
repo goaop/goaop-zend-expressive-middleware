@@ -9,10 +9,10 @@
 use Go\Core\AspectContainer;
 use Go\Core\AspectKernel;
 use Go\Core\GoAspectContainer;
-use Reinfi\GoAop\ExpressiveMiddleware\Factory\AspectContainerFactory;
-use Reinfi\GoAop\ExpressiveMiddleware\Kernel\Factory\AspectKernelFactory;
-use Reinfi\GoAop\ExpressiveMiddleware\Middleware\AspectMiddleware;
-use Reinfi\GoAop\ExpressiveMiddleware\Middleware\Factory\AspectMiddlewareFactory;
+use Go\Zend\Expressive\Factory\AspectContainerFactory;
+use Go\Zend\Expressive\Kernel\Factory\AspectKernelFactory;
+use Go\Zend\Expressive\Middleware\AspectMiddleware;
+use Go\Zend\Expressive\Middleware\Factory\AspectMiddlewareFactory;
 
 $basicDirectory = defined(
     'APPLICATION_PATH'
