@@ -1,5 +1,5 @@
 {
-  "name": "reinfi/goaop-zend-expressive-middleware",
+  "name": "goaop/goaop-zend-expressive-middleware",
   "type": "library",
   "description": "An Zend Expressive middleware for loading goaop aspects.",
   "keywords": [
