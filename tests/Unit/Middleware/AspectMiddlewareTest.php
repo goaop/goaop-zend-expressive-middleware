@@ -4,7 +4,9 @@ namespace Go\Zend\Expressive\Tests\Unit\Middleware;
 
 use Go\Core\AspectContainer;
 use PHPUnit\Framework\TestCase;
+use Prophecy\Argument;
 use Psr\Container\ContainerInterface;
+use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Go\Zend\Expressive\Middleware\AspectMiddleware;
 use Go\Zend\Expressive\Tests\Aspect\TestAspect;
@@ -44,7 +46,9 @@ class AspectMiddlewareTest extends TestCase
         );
 
         $request = $this->prophesize(ServerRequestInterface::class);
-        $handler = $this->prophesize(RequestHandlerInterface::class);
+        $handler = $this->prophesize(RequestHandlerInterface::class)
+            ->handle(Argument::type(ServerRequestInterface::class))
+            ->willReturn($this->prophesize(ResponseInterface::class)->reveal());
 
         $middleware->process(
             $request->reveal(),

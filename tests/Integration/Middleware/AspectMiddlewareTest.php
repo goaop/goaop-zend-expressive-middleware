@@ -31,6 +31,7 @@ class AspectMiddlewareTest extends TestCase
         $config = (
             new ConfigAggregator(
                 [
+                    \Zend\Expressive\ConfigProvider::class,
                     ConfigProvider::class,
                     new ArrayProvider(
                         [
@@ -96,6 +97,7 @@ class AspectMiddlewareTest extends TestCase
         $config = (
         new ConfigAggregator(
             [
+                \Zend\Expressive\ConfigProvider::class,
                 ConfigProvider::class,
                 new ArrayProvider(
                     [
