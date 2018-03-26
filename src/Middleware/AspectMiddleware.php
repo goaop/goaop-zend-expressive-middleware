@@ -3,7 +3,6 @@
 namespace Go\Zend\Expressive\Middleware;
 
 use Go\Core\AspectContainer;
-use Interop\Http\ServerMiddleware\DelegateInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
