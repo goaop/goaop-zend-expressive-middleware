@@ -4,10 +4,11 @@ namespace Go\Zend\Expressive\Middleware;
 
 use Go\Core\AspectContainer;
 use Interop\Http\ServerMiddleware\DelegateInterface;
-use Interop\Http\ServerMiddleware\MiddlewareInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Server\MiddlewareInterface;
+use Psr\Http\Server\RequestHandlerInterface;
 
 /**
  * @package Go\Zend\Expressive\Middleware
@@ -45,20 +46,17 @@ class AspectMiddleware implements MiddlewareInterface
     }
 
     /**
-     * @param ServerRequestInterface $request
-     * @param DelegateInterface      $delegate
-     *
-     * @return ResponseInterface
+     * @inheritdoc
      */
     public function process(
         ServerRequestInterface $request,
-        DelegateInterface $delegate
-    ) {
+        RequestHandlerInterface $handler
+    ): ResponseInterface {
         foreach ($this->aspects as $aspectName) {
             $aspect = $this->container->get($aspectName);
             $this->aspectContainer->registerAspect($aspect);
         }
 
-        return $delegate->process($request);
+        return $handler->handle($request);
     }
 }
