@@ -4,7 +4,7 @@ namespace Go\Zend\Expressive\Tests\Integration\Middleware;
 
 use Go\Core\AspectContainer;
 use PHPUnit\Framework\TestCase;
-use Go\Zend\Expressive\ConfigProvider;
+use Go\Zend\Expressive\ConfigProvider as GoExpressiveConfigProvider;
 use Go\Zend\Expressive\Middleware\AspectMiddleware;
 use Go\Zend\Expressive\Tests\Aspect\TestAspect;
 use Prophecy\Argument;
@@ -13,7 +13,9 @@ use Psr\Http\Server\MiddlewareInterface;
 use Zend\ConfigAggregator\ArrayProvider;
 use Zend\ConfigAggregator\ConfigAggregator;
 use Zend\Expressive\Application;
+use Zend\Expressive\ConfigProvider as ExpressiveConfigProvider;
 use Zend\Expressive\Container\ApplicationFactory;
+use Zend\Expressive\Router\ConfigProvider as ExpressiveRouterConfigProvider;
 use Zend\Expressive\Router\RouterInterface;
 use Zend\HttpHandlerRunner\Emitter\EmitterInterface;
 use Zend\ServiceManager\Config;
@@ -34,9 +36,9 @@ class AspectMiddlewareTest extends TestCase
         $config = (
             new ConfigAggregator(
                 [
-                    \Zend\Expressive\ConfigProvider::class,
-                    \Zend\Expressive\Router\ConfigProvider::class,
-                    ConfigProvider::class,
+                    ExpressiveConfigProvider::class,
+                    ExpressiveRouterConfigProvider::class,
+                    GoExpressiveConfigProvider::class,
                     new ArrayProvider(
                         [
                             'dependencies' => [
@@ -82,7 +84,8 @@ class AspectMiddlewareTest extends TestCase
         $app->pipe(AspectMiddleware::class);
 
         $responseMiddleware = $this->prophesize(MiddlewareInterface::class);
-        $responseMiddleware->process(Argument::any(), Argument::any())
+        $responseMiddleware
+            ->process(Argument::any(), Argument::any())
             ->willReturn($this->prophesize(ResponseInterface::class)->reveal());
         $app->pipe($responseMiddleware->reveal());
 
@@ -110,9 +113,9 @@ class AspectMiddlewareTest extends TestCase
         $config = (
         new ConfigAggregator(
             [
-                \Zend\Expressive\ConfigProvider::class,
-                \Zend\Expressive\Router\ConfigProvider::class,
-                ConfigProvider::class,
+                ExpressiveConfigProvider::class,
+                ExpressiveRouterConfigProvider::class,
+                GoExpressiveConfigProvider::class,
                 new ArrayProvider(
                     [
                         'dependencies' => [

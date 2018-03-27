@@ -47,7 +47,8 @@ class AspectMiddlewareTest extends TestCase
 
         $request = $this->prophesize(ServerRequestInterface::class);
         $handler = $this->prophesize(RequestHandlerInterface::class);
-        $handler->handle(Argument::type(ServerRequestInterface::class))
+        $handler
+            ->handle(Argument::type(ServerRequestInterface::class))
             ->willReturn($this->prophesize(ResponseInterface::class)->reveal());
 
         $middleware->process(
