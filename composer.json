@@ -15,9 +15,10 @@
     }
   ],
   "require": {
+    "php": ">=7.1",
     "goaop/framework": "^2.1",
     "zendframework/zend-servicemanager": "^3.0",
-    "http-interop/http-middleware": "^0.4.0"
+    "psr/http-server-middleware": "^1.0"
   },
   "bin": [
     "bin/goaop-expressive-warmup"
@@ -35,8 +36,9 @@
   "require-dev": {
     "symfony/console": "^3.3",
     "phpunit/phpunit": "^5.7",
-    "zendframework/zend-expressive": "^2.0",
-    "zendframework/zend-config-aggregator": "^1.0"
+    "zendframework/zend-expressive": "^3.0",
+    "zendframework/zend-config-aggregator": "^1.0",
+    "zendframework/zend-diactoros": "^1.7"
   },
   "extra": {
     "zf": {
